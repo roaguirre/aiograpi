@@ -30,6 +30,7 @@ View a list of a user's medias, following and followers
 | disable_stories_notifications(user_id: str)   | bool                  | Disable stories notifications of user                        |
 | close_friend_add(user_id: str)                | bool                  | Add to Close Friends List                                    |
 | close_friend_remove(user_id: str)             | bool                  | Remove from Close Friends List                               |
+| search_users(query: str, count: int = 30)     | List[UserShort]       | Search users by query                                         |
 
 Low level methods:
 
