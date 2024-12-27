@@ -48,11 +48,11 @@ class FbSearchMixin:
         result = await self.private_request("fbsearch/topsearch_flat/", params=params)
         return result["list"]
 
-    async def search_users(self, query: str) -> List[UserShort]:
+    async def search_users(self, query: str, count: int = 30) -> List[UserShort]:
         params = {
             "search_surface": "user_search_page",
             "timezone_offset": self.timezone_offset,
-            "count": 30,
+            "count": count,
             "q": query,
         }
         result = await self.private_request("users/search/", params=params)
